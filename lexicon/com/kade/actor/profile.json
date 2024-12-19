@@ -1,0 +1,30 @@
+{
+  "lexicon": 1,
+  "id": "com.kade.repo.profile",
+  "defs": {
+    "main": {
+      "type": "record",
+      "description": "The user's profile",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["createdAt"],
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "datetime"
+          },
+          "pfp": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "bio": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

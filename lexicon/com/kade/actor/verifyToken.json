@@ -1,0 +1,44 @@
+{
+  "lexicon": 1,
+  "id": "com.kade.actor.verifyCode",
+  "defs": {
+    "main": {
+      "type": "procedure",
+      "description": "Verify the verification code sent to the user",
+      "input": {
+        "encoding": "application/json",
+        "schema": {
+          "type": "object",
+          "required": ["code"],
+          "properties": {
+            "code": {
+              "type": "string",
+              "description": "The Verification Code"
+            }
+          }
+        }
+      },
+      "output": {
+        "encoding": "application/json",
+        "schema": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": {
+              "type": "string",
+              "description": "Status of the code verification"
+            }
+          }
+        }
+      },
+      "errors": [
+        {
+          "name": "InvalidAuthSignature"
+        },
+        {
+          "name": "BadPassword"
+        }
+      ]
+    }
+  }
+}
